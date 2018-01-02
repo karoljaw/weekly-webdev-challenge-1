@@ -6,80 +6,95 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Forms</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600" rel="stylesheet">
 </head>
 <body>
-    <div class="logo">
-    </div>
-    <div class="column-left">
-    <div class="form">
-        <h1>Register Form</h1>
-        <form class="form-generic">
-            <input type="text" id="fname" name="firstname" placeholder="User name">
-            <input type="password" id="password" name="password" placeholder="Password">
-            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
-            <input type="email" id="email" name="email" placeholder="Email">
-
-            <input class="location" list="cities" name="location" placeholder="Location" required>
-            <datalist id="cities">
-                <option value="Warsaw">
-                    <option value="Lublin">
-                        <option value="Wroclaw">
-                            <option value="Krakow">
-                                <option value="Gdansk">
-            </datalist>
-            <input type="checkbox" id="checkbox1">
-            <label for="checkbox1">I have read and accept the terms of use.</label>
-        
-            <input type="submit" value="Sign Up">
-        </form>
-    </div>
-    <div class="form">
-        <h1>Send Email</h1>
-            <form class="form-generic">
-                <input type="text" id="fname" name="firstname" placeholder="User name">
-                <input type="email" id="email" name="email" placeholder="Email">
-                <input type="message" id="message" name="message" placeholder="Type your message">
-                <input type="checkbox" id="checkbox2">
-                <label for="checkbox2">Send a copy to my email.</label>
-                <input type="submit" value="Send Email">
-            </form>
-    </div>
-</div>
-<div class="column-right">
+    <div class="wrapper">
+        <div class="logo">
+            <img src="img/Masteralb.com TOP LOGO.png" class="logo__img" alt="logo masteralb.com">
+        </div>
+        <div class="main">
+            <div class="main__column">   
         <div class="form">
-            <h1>Sign In Form</h1>
-            <form class="form-generic">
+        <h1 class="form__heading">Register Form</h1>
+        <div class="form__container">
+            <form class="form__inside">
                 <input type="text" id="fname" name="firstname" placeholder="User name">
                 <input type="password" id="password" name="password" placeholder="Password">
-                <div class="form__row">
-                <div><input class="checkbox" type="checkbox" name="remember" value="remember"><label for="checkbox3">Remember me</label></div>
-                <input class="submit-w-40" id="checkbox3" type="submit" value="Sign in">
-                </div>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <input class="location" list="cities" name="location" placeholder="Location" required>
+                <datalist id="cities">
+                    <option value="Warsaw">
+                    <option value="Lublin">
+                    <option value="Wroclaw">
+                    <option value="Krakow">
+                    <option value="Gdansk">
+                </datalist>
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">I have read and accept the terms of use.</label>
+                <input type="submit" class="btn" value="Sign Up">
             </form>
         </div>
-    
-    <div class="form">
-        <h1>Recovery Form</h1>
-            <form class="form-generic">
-                <input type="email" id="email" name="email" placeholder="Enter your Email">
-                <input type="tel" id="tel" name="telephone" placeholder="Enter your Phone Number">
-                <div class="form__row">
-                    <input class="submit-w-40" type="submit" value="Send">
-                    <input class="submit-w-40" type="submit" value="Done">
-                </div>
-            </form>
+        </div> 
+        <div class="form">
+            <h1 class="form__heading">Send Email</h1>
+            <div class="form__container">
+                <form class="form__inside">
+                    <input type="text" id="fname" name="firstname" placeholder="User name">
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <textarea name="message" placeholder="Type your message ..."></textarea>
+                    <input type="checkbox" id="checkbox2">
+                    <label for="checkbox2">Send a copy to my email.</label>
+                    <input type="submit" class="btn" value="Send Email">
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="form">
-            <h1>Recovery Form</h1>
-                <form class="form-generic">
+        <div class="main__column">   
+        <div class="form">
+            <h1 class="form__heading">Sign In Form</h1>
+            <div class="form__container">
+                <form class="form__inside">
+                    <input type="text" id="fname" name="firstname" placeholder="User name">
+                    <input type="password" id="password" name="password" placeholder="Password">
+                    <input class="checkbox" id="checkbox3" type="checkbox" name="remember" value="remember">  
+                    <label for="checkbox3">Remember me</label>
+                    <input type="submit" class="btn" value="Sign in">
+                </form>
+            </div>
+        </div>
+        <div class="form">
+            <h1 class="form__heading">Recovery Form</h1>
+            <div class="form__container">
+                <form class="form__inside">
                     <input type="email" id="email" name="email" placeholder="Enter your Email">
+                    <input type="tel" id="tel" name="telephone" placeholder="Enter your Phone Number">
                     <div class="form__row">
-                        <input class="submit-w-40" type="submit" value="Subscribe">
-                        <input class="submit-w-40" type="submit" value="No, Thanks">
+                        <input type="submit" class="btn btn-smaller" value="Send">
+                        <input type="submit" class="btn btn-smaller btn-disable" value="Done">
                     </div>
                 </form>
+            </div>
+        </div>
+        <div class="form">
+            <h1 class="form__heading">Subscribe Form</h1>
+            <div class="form__container">
+                <form class="form__inside">
+                    <input type="email" id="email" name="email" placeholder="Enter your Email">
+                    <div class="form__row">
+                        <input type="submit" class="btn btn-smaller" value="Subscribe">
+                        <input type="submit" class="btn btn-smaller btn-red" value="No, Thanks">
+                    </div>
+                </form>
+            </div>
         </div>
         <div class="logo-bottom">
-            
+            <img src="img/Masteralb.com LOGO.png" class="logo__img" alt="logo bottom">    
         </div>
+    </div>  
 </div>
+        </div>
+    
+</body>
+</html>

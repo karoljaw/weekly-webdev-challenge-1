@@ -9,70 +9,78 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.wrapper {
+   max-width: 1000px;
+   margin: 0 auto;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
 }
 
 .logo {
-    background-image: url("img/Masteralb.com TOP LOGO.png");
-    background-repeat: no-repeat;
-    max-width: 529px;
-    height: 111px;
-    margin: 50px auto 25px auto;
-    opacity: .5;
+    max-width: 429px;
+    margin-top: 55px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.column-left {
-    width: 50%;
-    float: left;
+.logo-bottom {
+    margin-top: 50px;   
 }
 
-.column-right {
-    width: 50%;
-    float: right;
+.logo__img {
+    max-width: 100%;
+    opacity: .3;
+    display: block;
+    margin: 0 auto;
 }
 
 .form {
     max-width: 420px;
-    margin: 0 auto;
-    padding-bottom: 40px;
-    font-size: 18px;
 }
 
-.form h1 {
+.form__container {
+    background-color:  rgba(0, 0, 0, 0.23);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.form__inside {
+    background-color:  #f4f4f4;
+    padding: 14px 22px;
+    border-radius: 3px;
+}
+
+.form__heading {
+    font-size: 32px;
+    margin-top: 25px;
+    margin-bottom: 18px;
     text-align: center;
-    padding-bottom: 18px;
+    text-shadow: 1px 2px 2px rgba(43, 1, 0, 0.75);
 }
 
 .form__row {
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
-.form-generic {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 4px;
-}
-
 input {
-    color: #8e8e8e;
-}
-
-input[type=text], 
-input[type=password], 
-input[type=email], 
-input[type=tel], 
-select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border:  1px solid #c6c6c6;
+    border-radius: 3px;
+    background-color:  #f8f8f8;
 }
 
 input[type=text] {
-    background-color: #fff;
     background-image: url('img/input-username.png');
     background-position: 16px 4px; 
     background-repeat: no-repeat;
@@ -81,7 +89,6 @@ input[type=text] {
 }
 
 input[type=password] {
-    background-color: #fff;
     background-image: url('img/input-password.png');
     background-position: 16px 4px; 
     background-repeat: no-repeat;
@@ -90,7 +97,6 @@ input[type=password] {
 }
 
 input[type=email] {
-    background-color: #fff;
     background-image: url('img/input-email.png');
     background-position: 16px 4px; 
     background-repeat: no-repeat;
@@ -99,7 +105,6 @@ input[type=email] {
 }
 
 input[type=tel] {
-    background-color: #fff;
     background-image: url('img/input-phone.png');
     background-position: 16px 4px; 
     background-repeat: no-repeat;
@@ -108,13 +113,6 @@ input[type=tel] {
 }
 
 input[class="location"] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-
-    background-color: #fff;
     background-image: url('img/input-location.png');
     background-position: 16px 4px; 
     background-repeat: no-repeat;
@@ -123,45 +121,106 @@ input[class="location"] {
 }
 
 input[type=submit] {
-    width: 100%;
-    font-size: 20px;
-    background-color: #15d41c;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
+    color: #fff;
     cursor: pointer;
 }
 
-input[type=submit]:hover {
-    background-color: #15d41c;
+input[type=checkbox] {
+    display: none;
+ }
+
+input[type=checkbox] + label:before {
+    content: "";
+    border: 1px solid #8e8e8e;
+    border-radius: 3px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    position: relative;
+    top: 4px;
 }
 
-input[class="submit-w-40"] {
-    width: 40%;
-    padding: 14px 30px;
+input[type=checkbox]:checked + label:before {
+    width: 20px;
+    height: 20px;
+    transition: .2s;
+    border-radius: 3px;
 }
 
-input[type=message] {
-    width: 100%;
+input[type=checkbox]:checked + label::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    background: linear-gradient(#a3d740, #7fc41f);
+    position: absolute;
+    left: 5px;
+    top: 6px;
+}
+
+textarea {
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:  #c6c6c6;
+    background-color:  #f8f8f8;
+    width: 337px;
     height: 230px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 10px 15px;
+    font-family: inherit;
+    font-size: inherit;
+
+}
+
+.btn {
+    text-shadow: 1px 1px 0 #51850e;
+    background-color: #93d02b;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
+    border: 1px solid #3b9a00;
+    font-size: 23px;
+    padding: .4em;
+}
+
+.btn:hover {
+    background-color: #3b9a00;
+}
+
+.btn-smaller {
+    max-width: 149px;
+    font-size: 18px;
+    padding: .5em;
+}
+
+.btn-disable {
+    border-color:  #90ca6d;
+    background-color:  #bcdb97;
+}
+
+.btn-red {
+    border-color:  #a2202a;
+    background-color:  #f4495b;
+}
+
+.btn-red:hover {
+    background-color: #f52941;
 }
 
 label {
-    padding: 10px;
-    color: #8e8e8e;
+    color:  #afafaf;
+    font-size: 17px;
+    font-weight: 300;
+    position: relative;
 }
 
-.logo-bottom {
-    background-image: url("img/Masteralb.com LOGO.png");
-    background-repeat: no-repeat;
-    max-width: 353px;
-    height: 130px;
-    opacity: .3;
-    margin: 0 auto;
+@media (min-width: 880px) {
+    .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
 }
+
+
+
