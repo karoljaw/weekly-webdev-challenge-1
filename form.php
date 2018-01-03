@@ -1,3 +1,5 @@
+<?php
+
 $first = $_GET["firstname"];
 $password = $_GET["password"];
 $email = $_GET["email"];
@@ -7,3 +9,5 @@ echo $first;
 echo $password;
 echo $email;
 echo $location;
+
+?>
