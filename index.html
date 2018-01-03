@@ -18,11 +18,11 @@
         <div class="form">
         <h1 class="form__heading">Register Form</h1>
         <div class="form__container">
-            <form class="form__inside">
-                <input type="text" id="fname" name="firstname" placeholder="User name">
-                <input type="password" id="password" name="password" placeholder="Password">
-                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
-                <input type="email" id="email" name="email" placeholder="Email">
+            <form action="form.php" method="GET" class="form__inside">
+                <input type="text" id="fname" name="firstname" placeholder="User name" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
                 <input class="location" list="cities" name="location" placeholder="Location" required>
                 <datalist id="cities">
                     <option value="Warsaw">
