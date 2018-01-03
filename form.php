@@ -5,7 +5,7 @@ $location = $_GET["location"];
 
 $mailmassage = "Masz wiadomość od ".$first " from ".$location;
 
-$to = karoljaworek04@gmail.com;
+$to = "karoljaworek04@gmail.com";
 $subject = "My website form";
 $headers = "From: ".$email;
 
